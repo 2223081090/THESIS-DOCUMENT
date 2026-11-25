@@ -1,0 +1,571 @@
+I am providing you with my complete thesis/project files.
+
+My thesis is:
+
+**“Impact of Speed Violation on Crash Severity”**
+
+I specifically need you to reconstruct and document **ONLY the dataset processing/preprocessing part** of my thesis.
+
+My supervisor wants to see:
+
+> **“Show me the dataset you started with, what processing you performed, the exact code you used, and the output after each processing step.”**
+
+Therefore, inspect my uploaded project files carefully and prepare a complete **Dataset Processing Documentation**.
+
+---
+
+# VERY IMPORTANT
+
+Do NOT create new preprocessing code.
+
+Do NOT suggest a better preprocessing method.
+
+Do NOT use generic preprocessing examples.
+
+Do NOT invent any output.
+
+Do NOT assume that a common preprocessing step was performed.
+
+Use ONLY the actual code, dataset, saved processed files, CSV files, logs, figures, and thesis materials contained in my uploaded project.
+
+The final result must represent **what I actually did in this thesis**.
+
+---
+
+# 1. IDENTIFY THE RAW DATASET
+
+First identify:
+
+* Raw dataset filename
+* Dataset format
+* Number of rows
+* Number of columns
+* All original column names
+* Target variable
+* Target variable values/classes
+* Data types
+* Missing values
+* Duplicate rows
+* Any obvious invalid values
+* Any categorical variables
+* Any numerical variables
+
+Show the exact output obtained from the actual project.
+
+If the dataset itself is available, inspect it directly.
+
+Create:
+
+### Raw Dataset Summary
+
+| Item              | Actual Value |
+| ----------------- | ------------ |
+| Dataset name      |              |
+| Number of rows    |              |
+| Number of columns |              |
+| Target variable   |              |
+| Target classes    |              |
+| Missing values    |              |
+| Duplicate rows    |              |
+
+Do not guess any value.
+
+---
+
+# 2. FIND THE EXACT PREPROCESSING CODE
+
+Identify the actual preprocessing file.
+
+It may be something like:
+
+`01_data_preprocessing.py`
+
+or another file.
+
+Show the exact relevant code used for:
+
+* Dataset loading
+* Column checking
+* Missing-value checking
+* Missing-value treatment
+* Duplicate handling
+* Data type conversion
+* Invalid value handling
+* Outlier detection
+* Outlier treatment/capping
+* Target processing
+* Data cleaning
+* Saving processed data
+
+Preserve the original implementation.
+
+---
+
+# 3. DATASET LOADING
+
+Show the exact code used to load the raw dataset.
+
+Then show:
+
+### Code
+
+```python
+[EXACT CODE FROM PROJECT]
+```
+
+### Actual Output
+
+Show the actual output corresponding to the code.
+
+For example, if the project contains output showing:
+
+* shape
+* columns
+* head
+* info
+* class counts
+
+show those actual values.
+
+If console output is not saved, do NOT fabricate it.
+
+Instead say:
+
+> “Exact console output was not preserved in the project files; the corresponding saved dataset/result is used as evidence.”
+
+---
+
+# 4. INITIAL DATASET SHAPE
+
+Show the dataset shape before processing.
+
+Clearly report:
+
+**Rows = ?**
+
+**Columns = ?**
+
+Verify this directly from the raw dataset/project.
+
+Also show the exact code that produced the shape.
+
+---
+
+# 5. COLUMN INSPECTION
+
+Show all original columns.
+
+Create a table:
+
+| No. | Column Name | Data Type | Role/Description |
+| --: | ----------- | --------- | ---------------- |
+
+Do not invent descriptions.
+
+If a description is not available from the thesis/project, write:
+
+> “Not explicitly documented in project files.”
+
+---
+
+# 6. MISSING VALUE ANALYSIS
+
+Find the exact code used to check missing values.
+
+Show:
+
+### Code
+
+```python
+[ACTUAL CODE]
+```
+
+### Actual Output
+
+Show the actual missing-value counts.
+
+Then explain:
+
+* Which columns had missing values
+* Number of missing values
+* Percentage if actually calculated
+* What processing was performed
+
+If missing values were not present, explicitly show:
+
+> No missing values were found.
+
+But only say this if verified.
+
+---
+
+# 7. DUPLICATE ANALYSIS
+
+Find whether duplicate rows were checked.
+
+Show:
+
+### Code
+
+```python
+[ACTUAL CODE]
+```
+
+### Output
+
+Show:
+
+* Number of duplicate rows
+* Whether duplicates were removed
+* Dataset size before and after duplicate handling
+
+If duplicates were NOT checked, explicitly state:
+
+> “Duplicate checking was not implemented in the provided preprocessing code.”
+
+Do not assume it happened.
+
+---
+
+# 8. DATA TYPE PROCESSING
+
+Identify every data type conversion actually performed.
+
+For example:
+
+* String → numerical
+* Object → categorical
+* Boolean → integer
+* Date/time conversion
+* Numeric conversion
+
+Show exact code and actual output.
+
+---
+
+# 9. INVALID VALUES
+
+Check the actual preprocessing implementation for:
+
+* Negative values
+* Impossible values
+* Placeholder values
+* Invalid coordinates
+* Invalid counts
+* Zero values
+* NaN/Inf
+* Any domain-specific invalid values
+
+Only document checks that actually exist in the implementation.
+
+---
+
+# 10. OUTLIER PROCESSING
+
+This is VERY IMPORTANT.
+
+Find the exact implementation for outlier detection/treatment.
+
+If I used the **IQR method**, show the exact code.
+
+Explain:
+
+### Q1
+
+### Q3
+
+### IQR
+
+and the actual lower/upper bounds if calculated.
+
+If outlier capping was used, explain exactly how.
+
+For example, if the implementation uses:
+
+```python
+lower = Q1 - 1.5 * IQR
+upper = Q3 + 1.5 * IQR
+```
+
+show the actual code and explain it.
+
+Then provide the actual output:
+
+* Number of outliers before treatment
+* Number after treatment
+* Dataset shape before/after
+* Columns affected
+
+Do not invent numbers.
+
+---
+
+# 11. TARGET VARIABLE PROCESSING
+
+Identify the actual target variable used for crash severity.
+
+The thesis uses:
+
+**High Severity = Positive Class**
+
+Document exactly how the target was processed.
+
+Show:
+
+### Original target values
+
+### Transformation code
+
+### Final target values
+
+### Class distribution
+
+Show the actual output.
+
+If binary transformation was used, show the exact mapping.
+
+Do not invent a mapping.
+
+---
+
+# 12. CLASS DISTRIBUTION
+
+Show the actual target distribution before and after processing if available.
+
+Create:
+
+| Class | Count | Percentage |
+| ----- | ----: | ---------: |
+|       |       |            |
+|       |       |            |
+
+Clearly identify:
+
+**Positive class = High Severity**
+
+if this is confirmed by the project.
+
+---
+
+# 13. FINAL CLEANED DATASET
+
+Identify the actual processed/cleaned dataset saved by the preprocessing code.
+
+Report:
+
+* Filename
+* Rows
+* Columns
+* Column names
+* Target column
+* Data types
+* Missing values after processing
+* Duplicate rows after processing
+
+Show the actual first few rows if available.
+
+---
+
+# 14. RAW → PROCESSED COMPARISON
+
+Create this table:
+
+| Property       | Raw Dataset | Processed Dataset |
+| -------------- | ----------: | ----------------: |
+| Rows           |             |                   |
+| Columns        |             |                   |
+| Missing values |             |                   |
+| Duplicate rows |             |                   |
+| Target classes |             |                   |
+
+Every value must be verified.
+
+---
+
+# 15. EXACT PROCESSING PIPELINE
+
+Create the actual processing flow based ONLY on the code:
+
+```text
+Raw Dataset
+      ↓
+Dataset Loading
+      ↓
+Initial Inspection
+      ↓
+Missing Value Processing
+      ↓
+Duplicate Processing
+      ↓
+Data Type Processing
+      ↓
+Invalid Value Processing
+      ↓
+Outlier Processing
+      ↓
+Target Processing
+      ↓
+Final Clean Dataset
+```
+
+IMPORTANT:
+
+Remove any step from this diagram that was not actually performed.
+
+Add any preprocessing step that actually exists in my code.
+
+---
+
+# 16. COMPLETE PREPROCESSING CODE
+
+At the end, provide the complete preprocessing implementation.
+
+Use the original project code.
+
+For example:
+
+### `01_data_preprocessing.py`
+
+```python
+[COMPLETE ACTUAL CODE]
+```
+
+Do not rewrite it into cleaner code.
+
+Do not optimize it.
+
+Do not simplify it.
+
+Do not replace it with an alternative implementation.
+
+---
+
+# 17. CODE → OUTPUT FORMAT
+
+For EVERY major processing step use this exact structure:
+
+## Step X — [Processing Step]
+
+### Purpose
+
+Explain what this step does.
+
+### Exact Code
+
+```python
+[ACTUAL PROJECT CODE]
+```
+
+### Actual Output
+
+```text
+[VERIFIED OUTPUT]
+```
+
+### Before Processing
+
+[actual verified information]
+
+### After Processing
+
+[actual verified information]
+
+### Thesis Relevance
+
+Explain how this processing step supports the thesis.
+
+---
+
+# 18. IMPORTANT: NO FAKE OUTPUT
+
+If exact output is not available, say:
+
+> **“Exact console output is not preserved in the provided project files.”**
+
+Then use the actual saved dataset/result to demonstrate the result.
+
+Never fabricate output.
+
+Never estimate.
+
+Never round a value unless the original result does so.
+
+---
+
+# 19. DATASET PROCESSING AUDIT
+
+At the end create:
+
+# Dataset Processing Verification
+
+| Processing Step         | Implemented in Code? | Actual Output Available? | Evidence |
+| ----------------------- | -------------------- | ------------------------ | -------- |
+| Dataset loading         |                      |                          |          |
+| Shape inspection        |                      |                          |          |
+| Missing-value analysis  |                      |                          |          |
+| Missing-value treatment |                      |                          |          |
+| Duplicate checking      |                      |                          |          |
+| Duplicate removal       |                      |                          |          |
+| Data type conversion    |                      |                          |          |
+| Invalid-value handling  |                      |                          |          |
+| Outlier detection       |                      |                          |          |
+| Outlier treatment       |                      |                          |          |
+| Target processing       |                      |                          |          |
+| Final dataset saving    |                      |                          |          |
+
+Use:
+
+* YES
+* NO
+* NOT AVAILABLE
+
+Do not assume.
+
+---
+
+# 20. FINAL SUPERVISOR VERSION
+
+Finally prepare a short section:
+
+# “What I Should Show My Supervisor”
+
+Give me the exact order in which I should show the code and output:
+
+1. Raw dataset
+2. Dataset shape
+3. Column inspection
+4. Missing values
+5. Duplicate analysis
+6. Data type processing
+7. Invalid value processing
+8. Outlier processing
+9. Target processing
+10. Final processed dataset
+11. Raw vs processed comparison
+12. Complete preprocessing code
+
+For each item tell me:
+
+**Which code section to open + which output/table/figure to show.**
+
+---
+
+# FINAL RULE
+
+The project files are the **single source of truth**.
+
+Priority:
+
+**ACTUAL CODE > ACTUAL DATASET > SAVED OUTPUT > THESIS DESCRIPTION**
+
+If the thesis says one thing but the code/data shows something different, do NOT silently change it.
+
+Report the discrepancy clearly as:
+
+> **Code–Thesis Discrepancy**
+
+My goal is to be able to sit with my supervisor and demonstrate:
+
+**“This was my raw dataset → this is the exact processing code → this is the output after processing → this is my final processed dataset.”**
+
+Do not add anything that I did not actually implement.
